@@ -2,13 +2,13 @@ const navLinks = document.querySelectorAll(".nav-bar a");
 const header = document.querySelector(".nav-wrapper");
 let headerScroll = false;
 window.onscroll = function (e) {
-    if(window.scrollY  > (header.offsetHeight*2)) {
-        header.style.backgroundColor = "var(--primary )";
+    if(window.scrollY  > (header.offsetHeight)) {
+        header.classList.add("nav-scrolled")
         navLinks.forEach(function(link) {
             link.style.color = "#FFFFFFCC";
         })
     }else{
-        header.style.backgroundColor = "white";
+        header.classList.remove("nav-scrolled")
         navLinks.forEach(function(link) {
             link.style.color = "#404040CC";
         })
