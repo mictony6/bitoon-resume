@@ -73,7 +73,7 @@
 .main-wrapper{
     display: flex;
     margin-top:12px;
-    flex-flow: row wrap;
+    flex-flow: row-reverse wrap;
 }
 
 
@@ -103,6 +103,7 @@
 
 .nav-scrolled{
     background: var(--primary);
+    width: 100%;
 }
 
 .nav-scrolled li a {
@@ -139,6 +140,24 @@
  }
 
 
+ .section-focused {
+     animation-name: flash;
+     animation-duration: 4s;
+     animation-timing-function: cubic-bezier(0,1,.5,1);
+ }
+
+ @keyframes flash {
+     from {
+         background-color: var(--accent);
+         transform: scale(105%);
+     }
+     to {
+         transform: scale(100%);
+
+     }
+
+ }
+
 
  /*sidebar*/
 
@@ -147,6 +166,7 @@
  .side-wrapper{
      margin-top:12px;
      flex:1;
+
  }
 
  .side-wrapper > img {
@@ -161,7 +181,7 @@
  .card {
      display: inline-block;
      padding: 12px 15px;
-     margin: auto ;
+     margin:  3px auto ;
      max-width: min-content;
      background: var(--secondary);
  }
@@ -176,13 +196,14 @@
      display: grid;
      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
      gap: 10px;
+
  }
 
  .project-item  {
      padding: 12px 15px;
      border: rgba(0, 0, 0, 0.25) dashed  1px;
      transition: transform 0.1s;
-     transition-timing-function:ease-in-out;
+     transition-timing-function:cubic-bezier(.38,.15,0,1.23);
  }
 
  .project-item p {
@@ -198,4 +219,20 @@
     transform: scale(102%) rotate(-2deg);
 
 }
+
+
+/*collapse*/
+
+#projects > h3{
+    /*text-decoration: underline;*/
+    /*text-decoration-color: var(--primary-alpha);*/
+    display: flex;
+    align-items: center;
+
+ }
+
+ #projects > h3 > img {
+     margin: 12px 15px;
+ }
+
 
