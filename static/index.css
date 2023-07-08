@@ -30,6 +30,8 @@
      width: 1px;
  }
  body {
+     margin:0;
+     padding: 0;
      max-height:100vh;
      font-family: var(--font-sans-serif);
      color: var(--text-color);
@@ -79,19 +81,13 @@
 /*navigation*/
 
 .nav-wrapper{
-    margin-bottom: 12px;
     position: sticky;
-    top:-1px;
     background: white;
     transition: all 0.5s;
+    transition-timing-function: cubic-bezier(.17,.93,1,1);
     z-index: 10;
 }
 
-.nav-scrolled {
-    background: var(--primary );
-
-
-}
 
 .nav-bar{
 
@@ -123,10 +119,6 @@
      flex: 5;
  }
 
- .content-wrapper > section {
-     scroll-margin-top: 6rem;
-
- }
 
  #about-me > header {
      font-weight: 900;
@@ -150,7 +142,7 @@
 
  .side-wrapper > img {
      border: solid var(--primary-alpha) 2px;
-     box-shadow: 0px 5px 0px var(--primary-alpha);
+     box-shadow: 0 5px 0 var(--primary-alpha);
      padding: 12px 15px;
  }
 
