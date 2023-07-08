@@ -90,7 +90,6 @@
 
 
 .nav-bar{
-
     margin:auto;
     display:flex;
     flex-wrap: wrap;
@@ -100,16 +99,26 @@
 
 }
 
-.nav-bar > li {
-    padding: 12px 15px;
+/*nav when page is scrolled*/
 
+.nav-scrolled{
+    background: var(--primary);
+}
+
+.nav-scrolled li a {
+    color:#FFFFFFCC;
+}
+
+/*nav bar list items*/
+.nav-bar > li {
+    margin: 12px 15px;
 }
 
 .nav-bar a {
     color:rgba(64,64,64, 0.8);
 }
 
-.nav-bar a:hover{
+.nav-bar li a:hover{
     color:blue;
 }
 

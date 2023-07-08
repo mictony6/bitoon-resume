@@ -22,23 +22,28 @@ let prevScrollpos = window.scrollY;
 window.onscroll = function() {
     let currentScrollPos = window.scrollY;
     if(window.scrollY  > (header.offsetHeight)) {
-        header.style.backgroundColor = "var(--primary)";
-        navLinks.forEach(function(link) {
-            link.style.color = "#FFFFFFCC";
-        })
+        header.classList.add("nav-scrolled");
+        // header.style.backgroundColor = "var(--primary)";
+        // navLinks.forEach(function(link) {
+        //     link.style.color = "#FFFFFFCC";
+        // })
+
 
     }else{
-        header.style.backgroundColor = "white";
-        navLinks.forEach(function(link) {
-            link.style.color = "#404040CC";
-        })
+        // header.style.backgroundColor = "white";
+        // navLinks.forEach(function(link) {
+        //     link.style.color = "#404040CC";
+        // })
+        header.classList.remove("nav-scrolled");
+
 
     }
     if (prevScrollpos < currentScrollPos) {
         header.style.top = "-100%";
 
+
     } else {
-        header.style.top = "-1px";
+        header.style.top = "0px";
     }
     prevScrollpos = currentScrollPos;
 }
