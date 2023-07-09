@@ -289,6 +289,9 @@ a:hover{
 
  .project-item img{
      border: solid 5px white;
+     max-width: 240px;
+     max-height: 120px;
+     object-fit: cover;
  }
 
 
