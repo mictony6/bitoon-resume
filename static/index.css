@@ -134,10 +134,6 @@
      justify-content: space-between;
  }
 
- section >header >a::after{
-     content: " ...";
- }
-
  #about-me > header {
      font-weight: 900;
      font-size:4rem;
