@@ -185,10 +185,7 @@ a:hover{
 
  }
 
-
  /*sidebar*/
-
-
 
  .side-wrapper{
      margin-top:12px;
@@ -234,12 +231,8 @@ a:hover{
  /*education*/
 
  .education-item{
-     display: flex;
-     flex-direction: column;
-     align-self: center;
      margin-bottom: 12px;
      padding: 0 8px;
-
  }
 
  .education-item h4 {
