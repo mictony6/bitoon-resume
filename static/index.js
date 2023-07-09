@@ -55,7 +55,7 @@ window.onscroll = function() {
 // style nav bar when scrolling
 
     let currentScrollPos = window.scrollY;
-    if(window.scrollY  > (header.offsetHeight*0.5)) {
+    if(window.scrollY  > (header.offsetHeight*0.25)) {
         header.classList.add("nav-scrolled");
     }else{
         header.classList.remove("nav-scrolled");
