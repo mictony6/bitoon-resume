@@ -6,14 +6,14 @@ const projects = [
         title : "Oasis" ,
         period:"2022-2023",
         link : "https://github.com/mictony6/oasis-mern",
-        description: "Web forum application for women experiencing violence. Communicate with other victims and seek out and book consultation with therapists.",
+        description: "Web forum application for women experiencing violence. Communicate with other victims and seek out and book consultation with therapists. Developed with Express.js and React frameworks.",
         image: "static/images/oasis.png",
     },
     {
         title : "3D Art Portfolio" ,
         period:"2021",
         link : "https://mictony.azurewebsites.net/",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer accumsan odio eu quam venenatis consectetur. Class leo.",
+        description: "Website made with Python Django for my 3d art portfolio where you can send requests for a commission or view a gallery of my sample works.",
         image: "static/images/art.png",
 
     },
@@ -21,7 +21,7 @@ const projects = [
         title : "Snake Game" ,
         period:"2021",
         link : "https://github.com/mictony6/SnakeGame",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer accumsan odio eu quam venenatis consectetur. Class leo.",
+        description: "A snake-like game made with Java graphics library. Go thru five levels with different gimmicks and unique solutions.",
         image: "static/images/snake.png",
     },
 
