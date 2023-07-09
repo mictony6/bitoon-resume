@@ -141,6 +141,8 @@ a:hover{
      font-family: var(--font-mono);
      color: var(--primary);
  }
+
+
 .nav-bar > li {
     margin: 12px 15px;
 }
@@ -233,13 +235,14 @@ a:hover{
 
 #social-links > img {
     margin-inline-end: 15px;
-    border: 1px solid white
+    border: 1px solid white;
+    cursor: pointer;
 }
 
  #social-links img:hover{
      transform: scale(102%) rotate(2deg);
      border: dashed 1px var(--primary);
-     background: white;
+     background: var(--secondary);
  }
 
  #social-links img:nth-child(even):hover{

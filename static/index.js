@@ -87,3 +87,10 @@ navLinks.forEach(function(navElement){
     }
 })
 
+const socialLinks = document.querySelectorAll("#social-links img");
+socialLinks.forEach(function (element){
+    element.onclick = function(){
+        window.open(element.dataset.link, "_blank");
+    }
+})
+
