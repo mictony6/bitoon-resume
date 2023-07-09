@@ -92,7 +92,7 @@
 
 
 .nav-bar{
-    margin:auto;
+    margin:12px auto;
     display:flex;
     flex-wrap: wrap;
     align-items: center;
@@ -112,6 +112,8 @@ a:hover{
 
 }
 
+
+
 /*nav when page is scrolled*/
 
 .nav-scrolled{
@@ -119,11 +121,26 @@ a:hover{
     width: 100%;
 }
 
+.nav-scrolled #logo span {
+    color: white;
+    font-size: 3rem;
+}
+
 .nav-scrolled li a {
     color:#FFFFFFCC;
 }
 
 /*nav bar list items*/
+
+ #logo span{
+     width: 64px;
+     aspect-ratio: 1/1;
+     margin: 0;
+     font-size: 4rem;
+     text-align: center;
+     font-family: var(--font-mono);
+     color: var(--primary);
+ }
 .nav-bar > li {
     margin: 12px 15px;
 }
