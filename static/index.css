@@ -181,7 +181,10 @@
      border: solid var(--primary-alpha) 2px;
      box-shadow: 0 5px 0 var(--primary-alpha);
      padding: 12px 15px;
+     width: 272px;
+     aspect-ratio: 1/1;
  }
+
 
 
  /*card*/
@@ -247,5 +250,6 @@
  .icon{
      margin: 12px 15px;
  }
+
 
 
