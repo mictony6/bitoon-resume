@@ -200,7 +200,7 @@ a:hover{
      border: solid var(--primary-alpha) 2px;
      box-shadow: 0 5px 0 var(--primary-alpha);
      padding: 12px 15px;
-     width: 240px;
+     height: 240px;
      aspect-ratio: 1/1;
      border-radius: 50%;
  }
@@ -238,6 +238,7 @@ a:hover{
      flex-direction: column;
      align-self: center;
      margin-bottom: 12px;
+     padding: 0 8px;
 
  }
 
