@@ -72,7 +72,6 @@
 
 .main-wrapper{
     display: flex;
-    margin-top:12px;
     flex-flow: row-reverse wrap;
 }
 
@@ -129,6 +128,15 @@
      flex: 5;
  }
 
+ section > header {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+ }
+
+ section >header >a::after{
+     content: " ...";
+ }
 
  #about-me > header {
      font-weight: 900;
@@ -184,6 +192,8 @@
      margin:  3px auto ;
      max-width: min-content;
      background: var(--secondary);
+     font-family: var(--font-mono);
+
  }
 
 
@@ -196,6 +206,7 @@
      display: grid;
      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
      gap: 10px;
+     margin-bottom: 12px;
 
  }
 
@@ -213,6 +224,7 @@
 .project-item:hover{
     background: var(--secondary);
     transform: scale(102%) rotate(2deg);
+
 }
 
 .project-item:nth-child(even):hover{
@@ -223,15 +235,16 @@
 
 /*collapse*/
 
-#projects > h3{
+#projects  h3{
     /*text-decoration: underline;*/
     /*text-decoration-color: var(--primary-alpha);*/
     display: flex;
     align-items: center;
+    margin-top: 0;
 
  }
 
- #projects > h3 > img {
+ .icon{
      margin: 12px 15px;
  }
 
