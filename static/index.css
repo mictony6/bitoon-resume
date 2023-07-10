@@ -176,6 +176,7 @@ a:hover{
  section > header {
      display: flex;
      align-items: center;
+     flex-wrap: wrap;
      justify-content: space-between;
  }
 
@@ -317,6 +318,7 @@ a:hover{
 
  }
 
+
  .project-item * {
      width: 100%;
  }
@@ -326,6 +328,7 @@ a:hover{
      max-width: 240px;
      max-height: 120px;
      object-fit: cover;
+     margin: auto;
  }
 
 
