@@ -97,6 +97,8 @@ navLinks.forEach(navElement => {
     }
 });
 
+
+// redirect icon clicks
 const socialLinks = document.querySelectorAll("#social-links img");
 socialLinks.forEach(element => {
     if(element && element.dataset){
