@@ -178,6 +178,7 @@ a:hover{
      justify-content: space-between;
  }
 
+
  #about-me > header {
      font-weight: 900;
      font-size:4rem;
@@ -293,7 +294,10 @@ a:hover{
 
  /*projects*/
 
-
+#projects >header > a {
+    margin-left: 15px;
+    text-align: center;
+}
  .project-grid {
      /*border-left: solid 1px grey;*/
      /*padding-left:15px;*/
@@ -302,8 +306,8 @@ a:hover{
      gap: 10px;
      margin-top: 12px;
      margin-bottom: 12px;
-
  }
+
 
  .project-item  {
      padding: 12px 15px;
