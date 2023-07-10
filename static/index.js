@@ -33,64 +33,79 @@ const projects = [
 const projectGrid = document.querySelector(".project-grid");
 projects.forEach(project => {
     const element = document.createElement("div");
-    element.classList.add("project-item");
-    //makes each project item a clickable link
-    element.onclick = function (){
-        window.open(project.link, "_blank");
+
+    if(element){
+        element.classList.add("project-item");
+        //makes each project item a clickable link
+        element.onclick = function (){
+            window.open(project.link, "_blank");
+        }
+
+        element.innerHTML = `
+            <img src="${project.image}"/>
+            <h4>${project.title}</h4>
+            <p>${project.description}</p>
+            <small>${project.period}</small>`;
+
+        if(projectGrid){
+            projectGrid.appendChild(element);
+        }
+
     }
-    element.innerHTML = `
-        <img src="${project.image}"/>
-        <h4>${project.title}</h4>
-        <p>${project.description}</p>
-        <small>${project.period}</small>
-`;
 
-    projectGrid.appendChild(element);
-})
+});
 
 
-let prevScrollPos = window.scrollY;
 let prevTarget;
+let prevScrollPos = window.scrollY;
 window.onscroll = function() {
-// style nav bar when scrolling
-
     let currentScrollPos = window.scrollY;
-    if(window.scrollY  > (header.offsetHeight)) {
-        header.classList.add("nav-scrolled");
-    }else{
-        header.classList.remove("nav-scrolled");
+
+    if (header && header.style){
+        // style nav bar when scrolling
+        if(window.scrollY  > (header.offsetHeight)) {
+            header.classList.add("nav-scrolled");
+        }else{
+            header.classList.remove("nav-scrolled");
+        }
+
+        // makes nav bar go out of page when scrolling down
+        if (prevScrollPos < currentScrollPos) {
+            header.style.top = "-100%";
+        } else {
+            header.style.top = "-1px";
+        }
     }
 
-// makes nav bar go out of page when scrolling down
-    if (prevScrollPos < currentScrollPos) {
-        header.style.top = "-100%";
-    } else {
-        header.style.top = "-1px";
-    }
     prevScrollPos = currentScrollPos;
 }
 
 // accents the section when the corresponding nav item is clicked
-navLinks.forEach(function(navElement){
+navLinks.forEach(navElement => {
     navElement.onclick = function (e) {
         e.preventDefault();
         const target = document.getElementById(navElement.dataset.element);
-        target.scrollIntoView({behavior:'smooth'});
-        if (prevTarget){
-            prevTarget.classList.remove("section-focused");
+
+        if(target){
+            target.scrollIntoView();
+            if (prevTarget){
+                prevTarget.classList.remove("section-focused");
+            }
+            target.classList.add("section-focused");
+            prevTarget = target;
         }
-        target.classList.add("section-focused");
-
-        target.s
-        prevTarget = target;
-
     }
-})
+});
 
+
+// redirect icon clicks
 const socialLinks = document.querySelectorAll("#social-links img");
-socialLinks.forEach(function (element){
-    element.onclick = function(){
-        window.open(element.dataset.link, "_blank");
+socialLinks.forEach(element => {
+    if(element && element.dataset){
+        element.onclick = function(){
+            window.open(element.dataset.link, "_blank");
+        }
     }
+
 })
 

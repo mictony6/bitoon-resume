@@ -10,13 +10,10 @@
  :root{
      --font-mono: 'Martian Mono', monospace;
      --font-sans-serif:'Inter Tight', sans-serif;
-     --text-color: rgb(38,38,38);
-     --accent:#b5effc;
      --secondary: rgba(217, 215, 215, 0.25);
      --primary: rgb(6, 132, 164);
      --primary-alpha: rgba(6, 132, 164, 0.25);
-     --tertiary : rgb(164, 114, 6, .25);
-     --gradient: var(--tertiary), var(--primary-alpha);
+     --gradient: rgb(164, 114, 6, .25), var(--primary-alpha);
  }
 
  html{
@@ -24,6 +21,7 @@
      padding: 0;
      background: white;
      font-size: 1rem;
+     scroll-behavior: smooth;
  }
 
 
@@ -37,7 +35,7 @@
      padding: 0;
      max-height:100vh;
      font-family: var(--font-sans-serif);
-     color: var(--text-color);
+     color: rgb(38,38,38);
      -webkit-font-smoothing: antialiased;
      -moz-osx-font-smoothing: grayscale;
  }
@@ -180,6 +178,7 @@ a:hover{
      justify-content: space-between;
  }
 
+
  #about-me > header {
      font-weight: 900;
      font-size:4rem;
@@ -198,7 +197,7 @@ a:hover{
 
  @keyframes flash {
      from {
-         background-color: var(--accent);
+         background-color: #b5effc;
          transform: scale(105%);
      }
      to {
@@ -295,7 +294,10 @@ a:hover{
 
  /*projects*/
 
-
+#projects >header > a {
+    margin-left: 15px;
+    text-align: center;
+}
  .project-grid {
      /*border-left: solid 1px grey;*/
      /*padding-left:15px;*/
@@ -304,8 +306,8 @@ a:hover{
      gap: 10px;
      margin-top: 12px;
      margin-bottom: 12px;
-
  }
+
 
  .project-item  {
      padding: 12px 15px;
